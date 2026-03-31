@@ -1,5 +1,13 @@
-Django==5.0.6
-gunicorn==22.0.0
-whitenoise==6.9.0
-django-encrypted-model-fields==0.6.5
+asgiref==3.11.1
+cffi==2.0.0
 cryptography==44.0.2
+Django==5.0.6
+django-encrypted-model-fields==0.6.5
+gunicorn==22.0.0
+packaging==26.0
+psycopg==3.3.3
+psycopg-binary==3.3.3
+pycparser==3.0
+sqlparse==0.5.5
+typing_extensions==4.15.0
+whitenoise==6.9.0
