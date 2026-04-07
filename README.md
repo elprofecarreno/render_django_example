@@ -1,3 +1,7 @@
+
+
+
+
 SECRET_KEY=dfasdfsdafdsafdsdfd
 DB_NAME=render_db_93rc
 DB_USER=render_user

@@ -28,10 +28,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['render-django-example-js2h.onrender.com', 'localhost', '127.0.0.1']
+# Leemos la variable; si no existe, usamos 'localhost' como string base
+raw_hosts = os.environ.get('ALLOWED_HOSTS', 'localhost')
+
+# Limpiamos y convertimos en lista en un solo paso
+ALLOWED_HOSTS = [host.strip() for host in raw_hosts.split(',') if host.strip()]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
